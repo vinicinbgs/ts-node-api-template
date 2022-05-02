@@ -1,0 +1,11 @@
+#!bin/bash
+
+TOOL=$1
+
+if [[ $TOOL == "heroku" ]] || [[ $TOOL == "-he" ]]; then
+    bash tools/heroku/run.sh
+fi;
+
+if [[ $TOOL == "request" ]] || [[ $TOOL == "-r" ]]; then
+    bash tools/requests/run.sh ${@:2}
+fi;
